@@ -13,7 +13,7 @@ def Home():
     return render_template('air.html')
 
 #user input commands
-@app.route('/prediction',methods=['POST'])
+@app.route('https://prediction-air-quality.herokuapp.com/prediction',methods=['POST'])
 def predict():
     City=(request.form['City'])
     PT08_S1_CO=float(request.form['PT08_S1_CO'])
